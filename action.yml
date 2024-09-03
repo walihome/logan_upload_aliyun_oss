@@ -1,4 +1,4 @@
-name: 'aliyun-oss-website-action'
+name: 'logan_upload_aliyun_oss'
 description: 'Deploy your static website on aliyun OSS'
 author: 'Binwei Fang <fangbinwei@yeah.net>'
 branding:
