@@ -8,6 +8,9 @@ inputs:
   folder:
     description: 'Folder which contains the website files'
     required: true
+  OSS_PATH:
+    description: 'Folder which contains the website files'
+    required: true
   exclude:
     description: 'Exclude file from the folder'
     required: false
