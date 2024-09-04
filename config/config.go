@@ -22,7 +22,7 @@ var (
 	Bucket          *oss.Bucket
 	SkipSetting     bool
 	IsIncremental   bool
-	OSSPath 	string // 新增变量，用于存储OSS中的文件路径
+	OssDir 		string // 新增变量，用于存储OSS中的文件路径
 
 	IndexPage         string
 	NotFoundPage      string
@@ -45,10 +45,10 @@ func init() {
 	BucketName = os.Getenv("BUCKET")
 	SkipSetting = os.Getenv("SKIP_SETTING") == "true"
 	IsIncremental = os.Getenv("INCREMENTAL") == "true"
-	OSSPath = utils.Getenv("ossDir", "tutorial")
+	OssDir = utils.Getenv("ossDir", "tutorial")
 
 	// 打印和OSS客户端初始化的代码
-	fmt.Printf("OSS Path: %s\n", OSSPath)
+	fmt.Printf("OssDir: %s\n", OssDir)
 
 	IndexPage = utils.Getenv("INDEX_PAGE", "index.html")
 	NotFoundPage = utils.Getenv("NOT_FOUND_PAGE", "404.html")
