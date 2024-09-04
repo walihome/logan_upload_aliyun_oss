@@ -40,7 +40,7 @@ func UploadObjects(root string, bucket *oss.Bucket, records <-chan utils.FileInf
 			defer sw.Done()
 			fPath := item.Path
 			objectKey := strings.TrimPrefix(item.PathOSS, root)
-			objectKey := path.Join(ossDir, relativePath)  // 使用配置的OSS路径前缀
+			objectKey = path.Join(ossDir, relativePath)  // 使用配置的OSS路径前缀
 			options := getHTTPHeader(&item)
 
 			if shouldExclude(objectKey) {
