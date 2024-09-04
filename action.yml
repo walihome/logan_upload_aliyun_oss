@@ -81,5 +81,7 @@ runs:
     IMAGE_CACHE_CONTROL: ${{ inputs.imageCacheControl }}
     OTHER_CACHE_CONTROL: ${{ inputs.otherCacheControl }}
     PDF_CACHE_CONTROL: ${{ inputs.pdfCacheControl }}
+    OSS_DIR: ${{ inputs.ossDir }}
+    
 
     
