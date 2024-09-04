@@ -39,8 +39,10 @@ func UploadObjects(root string, bucket *oss.Bucket, records <-chan utils.FileInf
 		go func(item utils.FileInfoType) {
 			defer sw.Done()
 			fPath := item.Path
-			objectKey := strings.TrimPrefix(item.PathOSS, root)
-			objectKey = path.Join(ossDir, relativePath)  // 使用配置的OSS路径前缀
+			// 计算相对路径
+			relativePath := strings.TrimPrefix(item.Path, root)
+			// 使用配置的OSS路径前缀
+			objectKey := path.Join(ossDir, relativePath)
 			options := getHTTPHeader(&item)
 
 			if shouldExclude(objectKey) {
