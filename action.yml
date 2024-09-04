@@ -9,7 +9,7 @@ inputs:
     description: 'Folder which contains the website files'
     required: true
   OSS_PATH:
-    description: 'Folder which contains the website files'
+    description: 'Specify which directory to sync to OSS'
     required: true
   exclude:
     description: 'Exclude file from the folder'
