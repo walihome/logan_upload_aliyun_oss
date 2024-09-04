@@ -41,7 +41,7 @@ func main() {
 	records := utils.WalkDir(config.Folder)
 
 	fmt.Println("---- [upload] ---->")
-	uploaded, uploadErrs := operation.UploadObjects(config.Folder, config.Bucket, records, incremental, config.OSSPath)
+	uploaded, uploadErrs := operation.UploadObjects(config.Folder, config.Bucket, records, incremental, config.OssDir)
 	utils.LogErrors(uploadErrs)
 	fmt.Println("<---- [upload end] ----")
 	fmt.Println()
