@@ -45,7 +45,7 @@ func init() {
 	BucketName = os.Getenv("BUCKET")
 	SkipSetting = os.Getenv("SKIP_SETTING") == "true"
 	IsIncremental = os.Getenv("INCREMENTAL") == "true"
-	OssDir = utils.Getenv("ossDir", "tutorial")
+	OssDir = utils.Getenv("OSS_DIR", "tutorial")
 
 	// 打印和OSS客户端初始化的代码
 	fmt.Printf("OssDir: %s\n", OssDir)
